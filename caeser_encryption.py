@@ -24,8 +24,9 @@ def caeser(p,k=3):
 
 
 p = ch_map['q']
-caeser(p)
-
+output = caeser(p)
+print("cipher text for character q is ",chr(output+65))
+ 
 def wrapper(plain_text):
     ciphertext  = ''
     for letter in plain_text:
@@ -37,10 +38,3 @@ def wrapper(plain_text):
 c1=wrapper('wearesecurityexperts')
 print(c1)
 
-
-def alpha_map():
-    ch_map = {}
-    for counter in range(0,26):
-        ch = chr(counter+97)
-        ch_map[ch]=counter
-    return ch_map
